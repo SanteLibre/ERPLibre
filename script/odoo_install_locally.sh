@@ -21,12 +21,12 @@ OE_CONFIG_FILE="${OE_HOME}/config.conf"
 #MINIMAL_ADDONS="False"
 #INSTALL_NGINX="True"
 
-if hash python3.7 2>/dev/null; then
-    PYTHON37="True"
-    PYTHON36="False"
-elif hash python3.6 2>/dev/null; then
-    PYTHON37="False"
+if hash python3.6 2>/dev/null; then
     PYTHON36="True"
+    PYTHON37="False"
+elif hash python3.7 2>/dev/null; then
+    PYTHON36="False"
+    PYTHON37="True"
 else
     echo "Missing python3.7 or python3.6. Python3.8 is not compatible."
     exit 1
@@ -151,10 +151,10 @@ git submodule update --init
 
 echo -e "\n---- Create Virtual environment Python ----"
 cd ${OE_HOME}
-if [[ ${PYTHON37} = "True" ]]; then
-    python3.7 -m venv venv
-elif [[ ${PYTHON36} = "True" ]]; then
+if [[ ${PYTHON36} = "True" ]]; then
     python3.6 -m venv venv
+elif [[ ${PYTHON37} = "True" ]]; then
+    python3.7 -m venv venv
 fi
 cd -
 
