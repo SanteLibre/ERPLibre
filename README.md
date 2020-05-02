@@ -49,11 +49,11 @@ python odoo/odoo-bin -c config.conf -d [DATABASE] -u all --log-level debug
 python odoo/odoo-bin -c config.conf -d [DATABASE] -u [module] --log-level debug
 ```
 
-## Create module scafhold (run in the venv)
-'''
+## Create module scaffold (run in the venv)
+```
 source ./venv/bin/activate
 python odoo/odoo-bin scaffold MODULE_NAME addons/REPO_NAME/
-'''
+```
 
 ## Test
 ```
