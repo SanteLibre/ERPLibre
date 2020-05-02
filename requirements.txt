@@ -3,3 +3,7 @@ agithub
 gitpython
 PyYAML
 retrying
+shapely
+geojson
+simplejson
+numpy

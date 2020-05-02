@@ -1,5 +1,10 @@
 # ERPLibre
 
+## Setup for Ubuntu 18.04
+```
+./script/odoo_install_debian_dependancy.sh
+```
+
 ## Installation procedure production
 
 ##### 1. Clone the project:
@@ -11,7 +16,7 @@ Modify the file env_var.sh for production installation.
 
 ##### 3. Execute the script:
 ```
-sudo ./script/odoo_install_production.sh
+./script/odoo_install_production.sh
 ```
 
 ## Installation procedure locally
@@ -23,7 +28,7 @@ git clone https://github.com/ERPLibre/ERPLibre.git
 
 ##### 2. Execute the script:
 ```
-sudo ./script/odoo_install_locally.sh
+./script/odoo_install_locally.sh
 ```
 
 # Execution
