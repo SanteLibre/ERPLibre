@@ -49,6 +49,12 @@ python odoo/odoo-bin -c config.conf -d [DATABASE] -u all --log-level debug
 python odoo/odoo-bin -c config.conf -d [DATABASE] -u [module] --log-level debug
 ```
 
+## Create module scafhold (run in the venv)
+'''
+source ./venv/bin/activate
+python odoo/odoo-bin scaffold MODULE_NAME addons/REPO_NAME/
+'''
+
 ## Test
 ```
 python odoo/odoo-bin -c config.conf -d [DATABASE] -i [module to test] --test-enable --stop-after-init --log-level=test --test-tags [module_name][tags]
