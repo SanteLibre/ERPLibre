@@ -21,10 +21,10 @@ OE_CONFIG_FILE="${OE_HOME}/config.conf"
 #MINIMAL_ADDONS="False"
 #INSTALL_NGINX="True"
 
-if hash python3.6 2>/dev/null; then
+if which python3.6 2>/dev/null; then
     PYTHON36="True"
     PYTHON37="False"
-elif hash python3.7 2>/dev/null; then
+elif which python3.7 2>/dev/null; then
     PYTHON36="False"
     PYTHON37="True"
 else
